@@ -72,6 +72,11 @@
             <artifactId>bce-java-sdk</artifactId>
             <version>${bos.sdk.version}</version>
         </dependency>
+        <dependency>
+            <groupId>com.github.olivergondza</groupId>
+            <artifactId>maven-jdk-tools-wrapper</artifactId>
+            <version>0.1</version>
+        </dependency>
     </dependencies>
 
     <build>
