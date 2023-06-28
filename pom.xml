@@ -71,19 +71,13 @@
             <groupId>com.baidubce</groupId>
             <artifactId>bce-java-sdk</artifactId>
             <version>${bos.sdk.version}</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.apache.hbase</groupId>
+                    <artifactId>hbase-client</artifactId>
+                </exclusion>
+            </exclusions>
         </dependency>
-        <dependency>
-            <groupId>jdk.tools</groupId>
-            <artifactId>jdk.tools</artifactId>
-            <scope>system</scope>
-            <version>1.6</version>
-            <systemPath>${java.home}/../lib/tools.jar</systemPath>
-        </dependency>
-<!--        <dependency>-->
-<!--            <groupId>com.github.olivergondza</groupId>-->
-<!--            <artifactId>maven-jdk-tools-wrapper</artifactId>-->
-<!--            <version>0.1</version>-->
-<!--        </dependency>-->
     </dependencies>
 
     <build>
