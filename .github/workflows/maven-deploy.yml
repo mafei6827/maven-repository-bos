@@ -12,19 +12,21 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v2
-    - name: Set up JDK 1.8
-      uses: actions/setup-java@v1
+    - uses: actions/checkout@v3
+    - name: Set up JDK 17
+      uses: actions/setup-java@v3
       with:
-        java-version: 1.8
+        java-version: '17'
+        distribution: 'temurin'
 
     - name: Build with Maven
       run: mvn -B package --file pom.xml
 
     - name: Set up Apache Maven Central
-      uses: actions/setup-java@v1
+      uses: actions/setup-java@v3
       with: # running setup-java again overwrites the settings.xml
-        java-version: 1.8
+        java-version: '17'
+        distribution: 'temurin'
         server-id: sonatype-nexus-repository # Value of the distributionManagement/repository/id field of the pom.xml
         server-username: MAVEN_USERNAME # env variable for username in deploy
         server-password: MAVEN_CENTRAL_TOKEN # env variable for token in deploy
