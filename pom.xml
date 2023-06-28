@@ -4,7 +4,7 @@
 
     <groupId>io.github.mafei6827</groupId>
     <artifactId>maven-repository-bos</artifactId>
-    <version>0.0.2-SNAPSHOT</version>
+    <version>0.0.2</version>
 
     <packaging>maven-plugin</packaging>
 
