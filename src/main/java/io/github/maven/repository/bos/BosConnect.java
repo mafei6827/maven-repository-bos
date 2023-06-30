@@ -13,7 +13,9 @@ public class BosConnect {
 
     public static BosClient connect(AuthenticationInfo authenticationInfo, String endpoint) {
         BosClientConfiguration config = new BosClientConfiguration();
-        config.setCredentials(new DefaultBceCredentials(authenticationInfo.getUserName(), authenticationInfo.getPassword()));
+        if (authenticationInfo != null) {
+            config.setCredentials(new DefaultBceCredentials(authenticationInfo.getUserName(), authenticationInfo.getPassword()));
+        }
         config.setEndpoint(endpoint);
         BosClient client = new BosClient(config);
         log.info("Connected to bos {}", endpoint);
