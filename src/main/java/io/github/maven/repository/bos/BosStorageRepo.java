@@ -55,7 +55,6 @@ public class BosStorageRepo {
                 IOUtils.copy(inputStream, outputStream);
             }
         } catch (Exception e) {
-            log.warn("Could not transfer file from [bucket={}, baseDirectory={}, key={}]", bucket, baseDirectory, key, e);
         }
     }
 

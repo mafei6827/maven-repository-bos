@@ -4,7 +4,7 @@
 
     <groupId>io.github.mafei6827</groupId>
     <artifactId>maven-repository-bos</artifactId>
-    <version>0.0.3</version>
+    <version>0.0.4</version>
 
     <packaging>maven-plugin</packaging>
 
@@ -34,7 +34,7 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-        <java.version>17</java.version>
+        <java.version>1.8</java.version>
         <bos.sdk.version>0.10.251</bos.sdk.version>
     </properties>
 
